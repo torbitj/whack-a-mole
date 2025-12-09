@@ -1,5 +1,5 @@
 import StartMenu from "./StartMenu";
-import HighScore from "./HighScore";
+import HighScores from "./HighScore";
 import ScoreBoard from "./ScoreBoard";
 import GameBoard from "./GameBoard";
 import { useGame } from "./GameContext";
@@ -10,7 +10,7 @@ export default function App() {
     <>
       <h1>Whack A Mole!</h1>
       <StartMenu />
-      <HighScore />
+      <HighScores />
     </> :
     <>
       <h1>Whack A Mole!</h1>

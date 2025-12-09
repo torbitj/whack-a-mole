@@ -1,5 +1,5 @@
-const HighScore = () => {
-  return <h2>High Score: </h2>
+const HighScore = ({score}) => {
+  return <p>{score}</p>
 }
 
 export default HighScore;

@@ -1,5 +1,9 @@
 const GameBoard = () => {
-  return <h2>Gameboard</h2>
+  return (
+    <ul>
+      
+    </ul>
+  )
 }
 
 export default GameBoard;

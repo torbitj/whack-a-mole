@@ -1,3 +1,8 @@
 export default function App() {
-  return <></>;
+  return (
+    <>
+      <h1>Whack A Mole!</h1>
+      
+    </>
+  );
 }

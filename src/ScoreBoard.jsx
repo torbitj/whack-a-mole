@@ -1,5 +1,10 @@
 const ScoreBoard = () => {
-  return <h2>Scoreboard</h2>
+  return (
+    <section>
+      <p>Score:</p>
+      <button>Restart</button>
+    </section>
+  )
 }
 
 export default ScoreBoard;

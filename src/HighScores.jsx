@@ -6,7 +6,7 @@ const HighScores = () => {
   return (
     <section>
       <h2>High Score:</h2>
-      {highscores.map((score, i) => <HighScore key={i} score={score} />)}
+      {highscores?.map((score, i) => <HighScore key={i} score={score} />)}
     </section>
   )
 }

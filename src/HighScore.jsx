@@ -1,5 +1,5 @@
 const HighScore = ({score}) => {
-  return <p>{score}</p>
+  return <p className="score">{score}</p>
 }
 
 export default HighScore;

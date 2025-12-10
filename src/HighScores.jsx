@@ -2,13 +2,19 @@ import HighScore from "./HighScore"
 import { useGame } from "./GameContext";
 
 const HighScores = () => {
-  const { highscores } = useGame;
-  return (
+  const { highScores } = useGame();
+  return highScores.length > 0 ? (
     <section>
-      <h2>High Score:</h2>
-      {highscores?.map((score, i) => <HighScore key={i} score={score} />)}
+      <h2>High Scores:</h2>
+      {highScores.map((score, i) => (
+        <HighScore key={i} score={score} />
+      ))}
     </section>
-  )
+  ) : (
+    <section>
+      <p>No scores yet</p>
+    </section>
+  );
 }
 
 export default HighScores;

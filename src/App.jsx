@@ -1,11 +1,11 @@
 import StartMenu from "./StartMenu";
-import HighScores from "./HighScore";
+import HighScores from "./HighScores";
 import ScoreBoard from "./ScoreBoard";
 import GameBoard from "./GameBoard";
 import { useGame } from "./GameContext";
 
 export default function App() {
-  const { isPlaying } = useGame;
+  const { isPlaying } = useGame();
   return (!isPlaying ?
     <>
       <h1>Whack A Mole!</h1>

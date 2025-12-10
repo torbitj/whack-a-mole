@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from "react"
 
-const GameComtext = createContext();
+const GameContext = createContext();
 
 export const GameProvider = ({ children }) => {
   const [score, setScore] = useState(0);
@@ -11,11 +11,25 @@ export const GameProvider = ({ children }) => {
 
   const togglePlaying = () => setIsPlaying(!isPlaying);
 
-  const recordHighScore = (currentScore) => setHighScores([...highScores, currentScore]);
+  const recordHighScore = (currentScore) => setHighScores([...highScores, currentScore].sort((a, b) => b - a));
+
+  const resetToStartMenu = () => {
+    togglePlaying();
+    recordHighScore(score);
+    setScore(0);
+  }
+
+  const newMoleHole = () => {
+    let newHole;
+    do {
+      newHole = Math.floor(Math.random() * numHoles);
+    } while (newHole === moleHole)
+    return newHole;
+  }  
 
   const addScore = () => {
     setScore(score + 1);
-    setMoleHole(Math.floor(Math.random() * numHoles) + 1)
+    setMoleHole(newMoleHole())
   }
 
   const value = {
@@ -26,14 +40,14 @@ export const GameProvider = ({ children }) => {
     numHoles,
     togglePlaying,
     addScore,
-    recordHighScore
+    resetToStartMenu
   }
 
-  return <GameComtext.Provider value={value}>{children}</GameComtext.Provider>
+  return <GameContext.Provider value={value}>{children}</GameContext.Provider>
 }
 
 export const useGame = () => {
-  const context = useContext(GameComtext);
+  const context = useContext(GameContext);
   if (!context) {
     throw new Error('Can only use GameProvider on select components');
   }

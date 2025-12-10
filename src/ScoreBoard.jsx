@@ -1,8 +1,11 @@
+import { useGame } from "./GameContext";
+
 const ScoreBoard = () => {
+  const { resetToStartMenu, score } = useGame();
   return (
     <section>
-      <p>Score:</p>
-      <button>Restart</button>
+      <p className="score">Score: {score}</p>
+      <button onClick={resetToStartMenu}>Restart</button>
     </section>
   )
 }

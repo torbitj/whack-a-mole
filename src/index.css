@@ -1,17 +1,38 @@
 body {
+  background: url(/grass.jpg);
   display: grid;
   grid-template-columns: 2fr 4fr 2fr;
   grid-template-areas: 
   ". app .";
 }
 
-ul {
-  width: 75%;
+h1 {
+  padding: 1.5em;
+  background-color: antiquewhite;
+  border: thin solid;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+ul {  
   padding-left: 0;
   justify-self: center;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+button,
+p {
+  font-size: 1.2em;
+}
+
+button {
+  padding: 1em;
 }
 
 .hole,
@@ -30,12 +51,31 @@ ul {
 }
 
 .score {
-  font-size: 1.2em;
+  padding: 1.2em 0;
+  background-color: antiquewhite;
+  font-size: 1.4em;
+  border-radius: 10px;
+}
+
+.start {
+  background-color: antiquewhite;
+  padding: 2em;
+  border: thin solid;
 }
 
 #root {
   grid-area: app;
   text-align: center;
+}
+
+#menu {
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+}
+
+#high-scores {
+  border-top: none;
+  border-radius: 0 0 10px 10px;
 }
 
 .hole,

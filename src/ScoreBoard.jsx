@@ -1,11 +1,15 @@
 import { useGame } from "./GameContext";
 
 const ScoreBoard = () => {
-  const { togglePlaying } = useGame();
+  const { togglePlaying, recordHighScore, setScore, score } = useGame();
   return (
     <section>
-      <p>Score:</p>
-      <button onClick={togglePlaying}>Restart</button>
+      <p>Score: {score}</p>
+      <button onClick={() => {
+        togglePlaying();
+        recordHighScore(score);
+        setScore(0);
+      }}>Restart</button>
     </section>
   )
 }

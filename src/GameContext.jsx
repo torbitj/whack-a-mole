@@ -24,6 +24,7 @@ export const GameProvider = ({ children }) => {
     highScores,
     moleHole,
     numHoles,
+    setScore,
     togglePlaying,
     addScore,
     recordHighScore

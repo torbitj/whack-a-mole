@@ -17,6 +17,7 @@ export const GameProvider = ({ children }) => {
     togglePlaying();
     recordHighScore(score);
     setScore(0);
+    newMoleHole();
   }
 
   const newMoleHole = () => {
@@ -24,12 +25,12 @@ export const GameProvider = ({ children }) => {
     do {
       newHole = Math.floor(Math.random() * numHoles);
     } while (newHole === moleHole)
-    return newHole;
+    setMoleHole(newHole);
   }  
 
   const addScore = () => {
     setScore(score + 1);
-    setMoleHole(newMoleHole())
+    newMoleHole();
   }
 
   const value = {

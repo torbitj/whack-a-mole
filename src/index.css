@@ -1,3 +1,11 @@
+ul {
+  list-style: none;
+}
+
+.hole,
+.mole {
+  height: 10em;
+}
 
 .hole {
   background: url("/hole.png") no-repeat center/contain;

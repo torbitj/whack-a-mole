@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from "react"
 
-const GameComtext = createContext();
+const GameContext = createContext();
 
 export const GameProvider = ({ children }) => {
   const [score, setScore] = useState(0);
@@ -29,11 +29,11 @@ export const GameProvider = ({ children }) => {
     recordHighScore
   }
 
-  return <GameComtext.Provider value={value}>{children}</GameComtext.Provider>
+  return <GameContext.Provider value={value}>{children}</GameContext.Provider>
 }
 
 export const useGame = () => {
-  const context = useContext(GameComtext);
+  const context = useContext(GameContext);
   if (!context) {
     throw new Error('Can only use GameProvider on select components');
   }

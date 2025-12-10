@@ -6,7 +6,9 @@ body {
 }
 
 ul {
+  width: 75%;
   padding-left: 0;
+  justify-self: center;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -15,6 +17,8 @@ ul {
 .hole,
 .mole {
   height: 8em;
+  width: 8em;
+  justify-self: center;
 }
 
 .hole {

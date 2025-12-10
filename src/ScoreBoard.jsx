@@ -1,8 +1,11 @@
+import { useGame } from "./GameContext";
+
 const ScoreBoard = () => {
+  const { togglePlaying } = useGame();
   return (
     <section>
       <p>Score:</p>
-      <button>Restart</button>
+      <button onClick={togglePlaying}>Restart</button>
     </section>
   )
 }

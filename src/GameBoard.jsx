@@ -1,4 +1,5 @@
 import MoleHole from "./MoleHole";
+
   
 const GameBoard = () => {
   return (

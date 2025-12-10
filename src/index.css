@@ -1,10 +1,19 @@
+body {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-areas: 
+  ". app .";
+}
+
 ul {
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .hole,
 .mole {
-  height: 10em;
+  height: 8em;
 }
 
 .hole {
@@ -13,5 +22,10 @@ ul {
 
 .mole {
   background-image: url("/mole.png");
+}
+
+#root {
+  grid-area: app;
+  text-align: center;
 }
 

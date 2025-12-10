@@ -15,7 +15,7 @@ export const GameProvider = ({ children }) => {
 
   const addScore = () => {
     setScore(score + 1);
-    setMoleHole(Math.floor(Math.random() * numHoles) + 1)
+    setMoleHole(Math.floor(Math.random() * numHoles))
   }
 
   const value = {

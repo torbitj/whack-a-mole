@@ -1,9 +1,9 @@
 import { useGame } from "./GameContext";
 
 const MoleHole = ({index}) => {
-  const { moleHole } = useGame();
+  const { moleHole, addScore } = useGame();
   return index === moleHole ? 
-    <li className="hole mole"></li> :
+    <li className="hole mole" onClick={addScore}></li> :
     <li className="hole"></li>
 }
 

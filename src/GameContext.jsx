@@ -11,7 +11,13 @@ export const GameProvider = ({ children }) => {
 
   const togglePlaying = () => setIsPlaying(!isPlaying);
 
-  const recordHighScore = (currentScore) => setHighScores([...highScores, currentScore]);
+  const recordHighScore = (currentScore) => setHighScores([...highScores, currentScore].sort((a, b) => b - a));
+
+  const resetToStartMenu = () => {
+    togglePlaying();
+    recordHighScore(score);
+    setScore(0);
+  }
 
   const addScore = () => {
     setScore(score + 1);
@@ -24,10 +30,9 @@ export const GameProvider = ({ children }) => {
     highScores,
     moleHole,
     numHoles,
-    setScore,
     togglePlaying,
     addScore,
-    recordHighScore
+    resetToStartMenu
   }
 
   return <GameContext.Provider value={value}>{children}</GameContext.Provider>

@@ -6,6 +6,7 @@ body {
 }
 
 ul {
+  padding-left: 0;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -24,8 +25,16 @@ ul {
   background-image: url("/mole.png");
 }
 
+.score {
+  font-size: 1.2em;
+}
+
 #root {
   grid-area: app;
   text-align: center;
 }
 
+.hole,
+.mole:hover {
+  cursor: pointer;
+}

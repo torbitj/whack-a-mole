@@ -14,10 +14,6 @@ h1 {
   box-shadow: 5px 5px 10px black;
 }
 
-h2 {
-  margin-top: 0;
-}
-
 ul {  
   padding-left: 0;
   justify-self: center;
@@ -51,7 +47,6 @@ button {
 }
 
 .score {
-  padding: 1.2em 0;
   background-color: antiquewhite;
   font-size: 1.4em;
   border-radius: 10px;
@@ -66,16 +61,6 @@ button {
 #root {
   grid-area: app;
   text-align: center;
-}
-
-#menu {
-  border-bottom: none;
-  border-radius: 10px 10px 0 0;
-}
-
-#high-scores {
-  border-top: none;
-  border-radius: 0 0 10px 10px;
 }
 
 .hole,

@@ -11,7 +11,6 @@ h1 {
   background-color: antiquewhite;
   border: thin solid;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px black;
 }
 
 ul {  
@@ -27,8 +26,19 @@ p {
   font-size: 1.2em;
 }
 
+p {
+  margin: 0;
+  padding: 0.5em;
+}
+
 button {
+  margin: 1em;
   padding: 1em;
+}
+
+h1,
+.start {
+    box-shadow: 5px 5px 10px black;
 }
 
 .hole,
@@ -56,6 +66,7 @@ button {
   background-color: antiquewhite;
   padding: 2em;
   border: thin solid;
+  border-radius: 10px;
 }
 
 #root {
